@@ -71,6 +71,12 @@ const AgeCalculator = () => {
     // )
   );
 
+  // months starts from 0 so whenever using month add + 1
+  console.log(
+    new Date(`${getYear(today)}-${getMonth(today)}-${getDate(today)}`),
+    `${getYear(today)}-${getMonth(today)}-${getDate(today)}`
+  );
+
   const monthsOld = differenceInMonths(new Date(), birthdate);
   const weeksOld = differenceInWeeks(new Date(), birthdate);
   const daysOld = differenceInDays(subDays(new Date(), 1), birthdate);

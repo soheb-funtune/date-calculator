@@ -11,10 +11,10 @@ function App() {
     <>
       {/* <h1>App</h1> */}
       <div className="flex">
-        <Card heading={"Zakat Calculator"}>
+        <Card heading={"Zakat Calculator"} bgClass="zakat">
           <Zakat />
         </Card>
-        <Card heading={"Age Calculator"}>
+        <Card heading={"Age Calculator"} bgClass="age">
           <AgeCalculator />
         </Card>
       </div>

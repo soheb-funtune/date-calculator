@@ -83,8 +83,7 @@ const AgeCalculator = () => {
   const hoursOld = differenceInHours(subDays(new Date(), 1), birthdate);
 
   return (
-    <>
-      <h2>Select DOB</h2>
+    <div style={{ display: "flex", flexDirection: "column" }}>
       <DatePicker
         renderCustomHeader={({
           date,
@@ -147,12 +146,14 @@ const AgeCalculator = () => {
         // dateFormat=  "dd/mm/yyyy" // we can show formatted output
       />
 
-      <h2>{` ${year} YEAR, ${monthss} MONTH, ${days} DAY`} Old.</h2>
-      <h2>{` ${monthsOld} Months Old`}.</h2>
-      <h2>{` ${weeksOld} Weeks Old`}.</h2>
-      <h2>{` ${daysOld} Days Old`}.</h2>
-      <h2>{` ${hoursOld} Hours Old`}.</h2>
-    </>
+      <b className="age-b">
+        {` ${year} YEAR, ${monthss} MONTH, ${days} DAY`} Old.
+      </b>
+      <b className="age-b">{` ${monthsOld} Months Old`}.</b>
+      <b className="age-b">{` ${weeksOld} Weeks Old`}.</b>
+      <b className="age-b">{` ${daysOld} Days Old`}.</b>
+      <b className="age-b">{` ${hoursOld} Hours Old`}.</b>
+    </div>
   );
 };
 
